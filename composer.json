@@ -3,8 +3,9 @@
     "description": "A Laravel API for managing todo lists.",
     "type": "project",
     "require": {
-        "php": "^8.1",
-        "laravel/framework": "^10.0"
+        "php": "^8.3",
+        "laravel/framework": "^11.0",
+        "maatwebsite/excel": "^3.1"
     },
     "autoload": {
         "psr-4": {
