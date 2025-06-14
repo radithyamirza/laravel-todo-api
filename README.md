@@ -84,7 +84,3 @@ This is a simple API-only Laravel project for managing a Todo list.
 ```
 
 ---
-
-## Reference
-
-![image1](image1)
