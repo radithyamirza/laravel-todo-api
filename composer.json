@@ -1,0 +1,24 @@
+{
+    "name": "radithyamirza/laravel-todo-api",
+    "description": "A Laravel API for managing todo lists.",
+    "type": "project",
+    "require": {
+        "php": "^8.1",
+        "laravel/framework": "^10.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        },
+        "classmap": [
+            "database/seeders",
+            "database/factories"
+        ]
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi"
+        ]
+    }
+}
