@@ -51,19 +51,19 @@ class TodoController extends Controller
         }
 
         // due_date: <range of dates> (e.g., start=YYYY-MM-DD&end=YYYY-MM-DD)
-        if ($request->filled('due_date_start')) {
-            $query->whereDate('due_date', '>=', $request->due_date_start);
+        if ($request->filled('start')) {
+            $query->whereDate('due_date', '>=', $request->start);
         }   
-        if ($request->filled('due_date_end')) {
-            $query->whereDate('due_date', '<=', $request->due_date_end);
+        if ($request->filled('end')) {
+            $query->whereDate('due_date', '<=', $request->end);
         }
 
         // time_tracked: <range of numeric values> (e.g., min=X&max=Y)
-        if ($request->filled('time_tracked_min')) {
-            $query->where('time_tracked', '>=', $request->time_tracked_min);
+        if ($request->filled('min')) {
+            $query->where('time_tracked', '>=', $request->min);
         }
-        if ($request->filled('time_tracked_max')) {
-            $query->where('time_tracked', '<=', $request->time_tracked_max);
+        if ($request->filled('max')) {
+            $query->where('time_tracked', '<=', $request->max);
         }
 
         // status: <multiple Strings separated by commas>

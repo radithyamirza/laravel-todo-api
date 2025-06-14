@@ -5,14 +5,14 @@ This is a simple API-only Laravel project for managing a Todo list.
 ## Features
 
 - Create Todo items with title, optional assignee, due date, time tracked, status, and priority
-- Validation to ensure due date is not in the past
-- API documentation via this README
+- Get Excel Output based on query params
+- Get To do chart based on query params
 
 ## Requirements
 
 - PHP >= 8.1
 - Composer
-- MySQL or SQLite
+- SQLite
 
 ## Setup
 
@@ -44,43 +44,7 @@ This is a simple API-only Laravel project for managing a Todo list.
     php artisan serve
     ```
 
-## API Endpoints
-
-### Create Todo
-
-`POST /api/todos`
-
-#### Request Body
-
-```json
-{
-  "title": "string, required",
-  "assignee": "string, optional",
-  "due_date": "YYYY-MM-DD, required, not in past",
-  "time_tracked": "numeric, optional, defaults to 0",
-  "status": "pending|open|in_progress|completed, optional, defaults to pending",
-  "priority": "low|medium|high, required"
-}
-```
-
-#### Validation
-
-- `title` and `due_date` are required.
-- `due_date` cannot be in the past.
-- `status` defaults to `pending` if not provided.
-
-#### Example Response
-
-```json
-{
-  "id": 1,
-  "title": "Do something",
-  "assignee": "radithyamirza",
-  "due_date": "2025-07-01",
-  "time_tracked": 0,
-  "status": "pending",
-  "priority": "medium"
-}
-```
+## Postman API Collections
+https://drive.google.com/file/d/14YmwBjO7AX1jts7qtLJTOmPR5wxzY1kJ/view?usp=sharing
 
 ---
